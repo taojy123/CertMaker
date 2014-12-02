@@ -72,7 +72,7 @@ while True:
         draw.text((1510, 1405), wc_id, font=arial, fill='#000')
         draw.text((1000, 1555), cert_id, font=arial, fill='#000')
         draw.text((1696, 1710), level, font=fzdbs, fill='#000')
-        draw.text((710, 1815), u'芙源品牌%s经销商授权。' % level, font=fzdbs, fill='#000')
+        # draw.text((710, 1815), u'芙源品牌%s经销商授权。' % level, font=fzdbs, fill='#000')
         draw.text((860, 2910), u'%s - %s' % (validity_from, validity_to), font=fzdbs, fill='#000')
         im.save("output/%s.png" % name)
     elif tp_id == "2":
@@ -83,7 +83,7 @@ while True:
         draw.text((1850, 1345), wc_id, font=arial, fill='#000')
         draw.text((938, 1510), cert_id, font=arial, fill='#000')
         draw.text((1657, 1675), level, font=dotum, fill='#000')
-        draw.text((620, 1790), u'부행브랜드 %s 중개상권한' % level , font=dotum, fill='#000')
+        # draw.text((620, 1790), u'부행브랜드 %s 중개상권한' % level , font=dotum, fill='#000')
         draw.text((820, 2920), u'%s - %s' % (validity_from, validity_to), font=dotum, fill='#000')
         im.save("output/%s.png" % name)
     elif tp_id == "3":
@@ -94,7 +94,7 @@ while True:
         draw.text((1500, 1472), wc_id, font=arial, fill='#000')
         draw.text((980, 1630), cert_id, font=arial, fill='#000')
         draw.text((1860, 1780), level, font=fzdbs, fill='#000')
-        draw.text((700, 1920), u'芙源品牌%s经销商授权。' % level, font=fzdbs, fill='#000')
+        # draw.text((700, 1920), u'芙源品牌%s经销商授权。' % level, font=fzdbs, fill='#000')
         draw.text((860, 2770), u'%s - %s' % (validity_from, validity_to), font=fzdbs, fill='#000')
         im.save("output/%s.png" % name)
     elif tp_id == "4":
@@ -105,7 +105,7 @@ while True:
         draw.text((1800, 1370), wc_id, font=arial, fill='#000')
         draw.text((980, 1494), cert_id, font=arial, fill='#000')
         # draw.text((1657, 1675), level, font=dotum, fill='#000')
-        draw.text((600, 1880), u'부행브랜드 %s 중개상권한' % level , font=dotum, fill='#000')
+        # draw.text((600, 1880), u'부행브랜드 %s 중개상권한' % level , font=dotum, fill='#000')
         draw.text((800, 2770), u'%s - %s' % (validity_from, validity_to), font=dotum, fill='#000')
         im.save("output/%s.png" % name)
     else:
