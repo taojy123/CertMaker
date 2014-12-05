@@ -72,9 +72,9 @@ while True:
         draw.text((1510, 1405), wc_id, font=arial, fill='#000')
         draw.text((1000, 1555), cert_id, font=arial, fill='#000')
         draw.text((1696, 1710), level, font=fzdbs, fill='#000')
-        # draw.text((710, 1815), u'芙源品牌%s经销商授权。' % level, font=fzdbs, fill='#000')
+        draw.text((710, 1815), u'芙源（亚洲）蜗牛霜%s经销商授权。' % level, font=fzdbs, fill='#000')
         draw.text((860, 2910), u'%s - %s' % (validity_from, validity_to), font=fzdbs, fill='#000')
-        im.save("output/%s.png" % name)
+        im.save("output/%s.jpg" % name)
     elif tp_id == "2":
         try_print_name(name)
         im = Image.open("templates/2.jpg")
@@ -83,9 +83,9 @@ while True:
         draw.text((1850, 1345), wc_id, font=arial, fill='#000')
         draw.text((938, 1510), cert_id, font=arial, fill='#000')
         draw.text((1657, 1675), level, font=dotum, fill='#000')
-        # draw.text((620, 1790), u'부행브랜드 %s 중개상권한' % level , font=dotum, fill='#000')
+        draw.text((620, 1790), u'부행브랜드 %s 중개상권한' % level , font=dotum, fill='#000')
         draw.text((820, 2920), u'%s - %s' % (validity_from, validity_to), font=dotum, fill='#000')
-        im.save("output/%s.png" % name)
+        im.save("output/%s.jpg" % name)
     elif tp_id == "3":
         try_print_name(name)
         im = Image.open("templates/3.jpg")
@@ -93,10 +93,10 @@ while True:
         draw.text((980, 1480), name, font=fzdbs, fill='#000')
         draw.text((1500, 1472), wc_id, font=arial, fill='#000')
         draw.text((980, 1630), cert_id, font=arial, fill='#000')
-        draw.text((1860, 1780), level, font=fzdbs, fill='#000')
-        # draw.text((700, 1920), u'芙源品牌%s经销商授权。' % level, font=fzdbs, fill='#000')
+        draw.text((1700, 1780), level, font=fzdbs, fill='#000')
+        draw.text((700, 1920), u'芙源活泉水系列产品%s经销商授权。' % level, font=fzdbs, fill='#000')
         draw.text((860, 2770), u'%s - %s' % (validity_from, validity_to), font=fzdbs, fill='#000')
-        im.save("output/%s.png" % name)
+        im.save("output/%s.jpg" % name)
     elif tp_id == "4":
         try_print_name(name)
         im = Image.open("templates/4.jpg")
@@ -105,9 +105,9 @@ while True:
         draw.text((1800, 1370), wc_id, font=arial, fill='#000')
         draw.text((980, 1494), cert_id, font=arial, fill='#000')
         # draw.text((1657, 1675), level, font=dotum, fill='#000')
-        # draw.text((600, 1880), u'부행브랜드 %s 중개상권한' % level , font=dotum, fill='#000')
+        draw.text((600, 1880), u'부행브랜드 %s 중개상권한' % level , font=dotum, fill='#000')
         draw.text((800, 2770), u'%s - %s' % (validity_from, validity_to), font=dotum, fill='#000')
-        im.save("output/%s.png" % name)
+        im.save("output/%s.jpg" % name)
     else:
         print u"找不到对应的模板编号:%s" % tp_id
 
