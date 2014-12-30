@@ -37,13 +37,19 @@ print u"按下回车键开始运行.."
 raw_input()
 
 
-
-simsun_large = ImageFont.truetype('fonts/simsun.ttc', 72, 0)
-simsun = ImageFont.truetype('fonts/simsun.ttc', 56, 0)
-dotum = ImageFont.truetype('fonts/gulim.ttc', 60, 3)
-simhei = ImageFont.truetype('fonts/simhei.ttf', 56)
-arial = ImageFont.truetype('fonts/arial.ttf', 60)
-fzdbs = ImageFont.truetype('fonts/fzdbs.ttf', 56)
+try:
+    simsun_large = ImageFont.truetype('fonts/simsun.ttc', 72, 0)
+    simsun = ImageFont.truetype('fonts/simsun.ttc', 56, 0)
+    dotum = ImageFont.truetype('fonts/gulim.ttc', 60, 3)
+    simhei = ImageFont.truetype('fonts/simhei.ttf', 56)
+    cuhei = ImageFont.truetype('fonts/simhei.ttf', 90)
+    arial = ImageFont.truetype('fonts/arial.ttf', 60)
+    fzdbs = ImageFont.truetype('fonts/fzdbs.ttf', 56)
+except:
+    pass
+yaheib = ImageFont.truetype('fonts/yaheib.ttf', 56)
+yaheib2 = ImageFont.truetype('fonts/yaheib.ttf', 72)
+yaheib3 = ImageFont.truetype('fonts/yaheib.ttf', 90)
 
 wb = load_workbook(filename='data.xlsx')
 sheet_name = wb.get_sheet_names()[0]
@@ -107,6 +113,27 @@ while True:
         # draw.text((1657, 1675), level, font=dotum, fill='#000')
         draw.text((600, 1880), u'부행브랜드 %s 중개상권한' % level , font=dotum, fill='#000')
         draw.text((800, 2770), u'%s - %s' % (validity_from, validity_to), font=dotum, fill='#000')
+    elif tp_id == "5":
+        try_print_name(name)
+        im = Image.open("templates/5.jpg")
+        draw = ImageDraw.Draw(im)
+        draw.text((1140, 1790), name, font=yaheib, fill='#000')
+        draw.text((1170, 1960), wc_id, font=yaheib, fill='#000')
+        draw.text((1775, 1900), wc_name, font=yaheib, fill='#000')
+        draw.text((577, 2200),  level , font=yaheib3, fill='#000')
+        draw.text((577, 2650), u'授权期限：%s 至 %s' % (validity_from, validity_to), font=yaheib2, fill='#000')
+        draw.text((577, 2750), u'授权经销编号：%s' % cert_id, font=yaheib2, fill='#000')
+        im.save("output/%s.jpg" % name)
+    elif tp_id == "6":
+        try_print_name(name)
+        im = Image.open("templates/6.jpg")
+        draw = ImageDraw.Draw(im)
+        draw.text((1140, 1790), name, font=yaheib, fill='#000')
+        draw.text((1170, 1960), wc_id, font=yaheib, fill='#000')
+        draw.text((1775, 1900), wc_name, font=yaheib, fill='#000')
+        draw.text((577, 2200), level , font=yaheib3, fill='#000')
+        draw.text((577, 2650), u'授权期限：%s 至 %s' % (validity_from, validity_to), font=yaheib2, fill='#000')
+        draw.text((577, 2750), u'授权经销编号：%s' % cert_id, font=yaheib2, fill='#000')
         im.save("output/%s.jpg" % name)
     else:
         print u"找不到对应的模板编号:%s" % tp_id
